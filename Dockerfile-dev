@@ -20,7 +20,7 @@ RUN --mount=type=bind,source=Pipfile.lock,target=Pipfile.lock \
     --mount=type=bind,source=Pipfile,target=Pipfile \
     python -m pip install --upgrade pip && \
     pip install pipenv && \
-    pipenv install --system --ignore-pipfile --deploy
+    pipenv install --system --ignore-pipfile --deploy --dev
 
 # Copy the source code into the container.
 COPY ./cine_book_api/ ./cine_book_api
